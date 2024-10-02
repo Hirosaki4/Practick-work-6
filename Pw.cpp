@@ -1,18 +1,23 @@
 #include <iostream>
+#include <Windows.h>
+using namespace std;
 
-int main() {
+int main()
+{
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
     int x, y, z;
 
-    // Введення чисел x, y, z
-    std::cout << "Введіть число x: ";
-    std::cin >> x;
-    std::cout << "Введіть число y: ";
-    std::cin >> y;
-    std::cout << "Введіть число z: ";
-    std::cin >> z;
+    //Завдання: Виконати побітове "AND" над двома числами: x і результатом побітового "XOR" числа y з числом z.
+    cout << "Введіть число x: ";
+    cin >> x;
+    cout << "Введіть число y: ";
+    cin >> y;
+    cout << "Введіть число z: ";
+     cin >> z;
 
-    // Обчислення результату та виведення
-    std::cout << "Результат побітового AND між x і (y XOR z): " << (x & (y ^ z)) << std::endl;
+    
+    cout << "Результат побітового AND між x і (y XOR z): " << (x & (y ^ z)) << endl;
 
     return 0;
 }
